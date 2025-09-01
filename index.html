@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer src="JavaScript/script.js"></script>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="Imagens/Logo atualizada_LaPPEM/imagem para a logo atualizada2.png" alt="Logo Lappem" class="logo">
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Início</a>
+            <a href="#projetos">Projetos de Pesquisa</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Bem-vindo ao LaPPEM</h1>
+            <p>>O Laboratório de Pesquisa e Práticas em Educação Musical foi criado no ano de 2018 e visa promover ações de produção e divulgação de conhecimentos na área de Música/Educação Musical, atuando a partir de várias frentes como, a realização de atividades pedagógicas/formativas (oficinas; palestras; vídeos; eventos; tutoriais; sites; etc.) e na elaboração de publicações relacionadas com os temas investigados (materiais didáticos; artigos em revistas acadêmicas nacionais e internacionais; capítulos de livros; livros). 
+            Além disso, ressalta-se que este Laboratório está vinculado ao Núcleo de Pesquisa em Educação Musical (PESQUISAMUS) da UFC, Campus de Sobral.</p>
+        </section>
+
+        <section>
+            <h2>Ultimas do instagram!</h2>
+            <div>  
+            <div id="ft-insta-app"></div>
+            <script type="module">
+            import App from "https://cdn.fouita.com/public/instagram-feed.js?11";
+            new App({
+                target: document.getElementById("ft-insta-app"),
+                props:{
+                    "settings":{
+                        "layout":"carousel",
+                        "source":"insta",
+                        "selected":"uname",
+                        "header":true,
+                        "autoplay":true,
+                        "zigzag":false,
+                        "cols":4,
+                        "cardHeight":300,
+                        "gap":0,
+                        "direction":"down",
+                        "height":700,
+                        "bgColor":"",
+                        "txtColor":"",
+                        "ukey":"59974a30-0730-4e13-84cc-ca8162c55d10"}
+                    }
+                });
+                </script>
+                <div id="ft-insta-brd"><a href="https://fouita.com/website-widgets/instagram-feed" target="_blank">Embed Instagram Feed</a><a href="https://fouita.com" target="_blank">with Fouita</a></div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Linhas de Pesquisa</h2>
+            <ul>
+                <li><strong>Iniciação à Docência em Música:</strong> Formação de profissionais que atuam no ensino formal de música.</li>
+                <li><strong>Políticas e Práticas em Educação Musical:</strong> Análise e reflexão sobre o cenário educacional e políticas públicas.</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="emai" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="message" id="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="status"></p>
+        </section>
+
+    </main>
+    
+
+    <footer>
+       <p>&copy; LAPPEM - Laboratório de Pesquisa e Práticas em Educação Musical. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuToggle.addEventListener("click", ()=> {
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
